@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Clínica - CardioVida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .menu {
+            width: 200px;
+            background-color: #2c3e50;
+            padding: 20px 0;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a252f;
+        }
+
+        .logo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #3498db;
+        }
+
+        .logo h3 {
+            color: #3498db;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .menu ul {
+            list-style: none;
+        }
+
+        .menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .menu ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .menu ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #3498db;
+            padding: 20px;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: #ecf0f1;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .sobre-imagem {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .equipe-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .medico-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .medico-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid #3498db;
+        }
+
+        .medico-card h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .medico-card p {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .valores-list {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .valores-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .valores-list li {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #ecf0f1;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+
+        .valores-list li strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <div class="logo">
+                <img src="imagens/logo_site.png" alt="Logo CardioVida">
+                <h3>CardioVida</h3>
+            </div>
+            <ul>
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="sobre.html">Sobre a Clínica</a></li>
+                <li><a href="horario.html">Horário de Atendimento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="header">
+                <h1>Sobre a Clínica CardioVida</h1>
+            </div>
+    
+            <div class="content">
+                <h2>Nossa História</h2>
+                <p>
+                    Fundada em 2010, a <strong>Clínica CardioVida</strong> nasceu do sonho de um grupo de cardiologistas 
+                    experientes que desejavam criar um centro de excelência em cuidados cardiovasculares. Ao longo de mais 
+                    de uma década, nos tornamos referência em cardiologia na região, atendendo milhares de pacientes com 
+                    dedicação e profissionalismo.
+                </p>
+                <p>
+                    Nossa trajetória é marcada pela busca constante por inovação e atualização tecnológica. Investimos 
+                    continuamente em equipamentos de última geração e na capacitação de nossa equipe, sempre com o objetivo 
+                    de oferecer o melhor tratamento possível aos nossos pacientes.
+                </p>
+
+                <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1200" alt="Instalações da Clínica" class="sobre-imagem">
+
+                <h2>Missão, Visão e Valores</h2>
+                <div class="valores-list">
+                    <ul>
+                        <li>
+                            <strong>Missão:</strong>
+                            Promover a saúde cardiovascular através de atendimento humanizado, diagnóstico preciso e 
+                            tratamento eficaz, contribuindo para a qualidade de vida de nossos pacientes.
+                        </li>
+                        <li>
+                            <strong>Visão:</strong>
+                            Ser reconhecida como a clínica de cardiologia mais confiável e inovadora da região, 
+                            referência em excelência médica e cuidado ao paciente.
+                        </li>
+                        <li>
+                            <strong>Valores:</strong>
+                            Ética profissional, respeito ao paciente, excelência técnica, inovação constante, 
+                            trabalho em equipe e compromisso com a vida.
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Nossa Equipe</h2>
+                <p>
+                    Contamos com uma equipe multidisciplinar de profissionais altamente qualificados, todos comprometidos 
+                    com a sua saúde e bem-estar. Nossos cardiologistas possuem ampla experiência e estão em constante 
+                    atualização para oferecer os tratamentos mais modernos e eficazes.
+                </p>
+
+                <div class="equipe-section">
+                    <div class="medico-card">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400" alt="Dr. Carlos Silva">
+                        <h3>Dr. Carlos Silva</h3>
+                        <p>Cardiologista Clínico<br>CRM 12345-CE<br>15 anos de experiência</p>
+                    </div>
+                    <div class="medico-card">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400" alt="Dra. Maria Santos">
+                        <h3>Dra. Maria Santos</h3>
+                        <p>Cardiologista Intervencionista<br>CRM 23456-CE<br>12 anos de experiência</p>
+                    </div>
+                    <div class="medico-card">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400" alt="Dr. João Oliveira">
+                        <h3>Dr. João Oliveira</h3>
+                        <p>Especialista em Arritmias<br>CRM 34567-CE<br>10 anos de experiência</p>
+                    </div>
+                    <div class="medico-card">
+                        <img src="https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?w=400" alt="Dra. Ana Costa">
+                        <h3>Dra. Ana Costa</h3>
+                        <p>Cardiologia Pediátrica<br>CRM 45678-CE<br>8 anos de experiência</p>
+                    </div>
+                </div>
+
+                <h2>Infraestrutura</h2>
+                <p>
+                    Nossa clínica está equipada com tecnologia de ponta para garantir diagnósticos precisos e tratamentos 
+                    eficazes. Possuímos salas de exames modernas, equipamentos digitais de última geração e um ambiente 
+                    acolhedor que proporciona conforto e tranquilidade aos nossos pacientes.
+                </p>
+                <p>
+                    Todas as nossas instalações são projetadas pensando no bem-estar do paciente, com ambientes climatizados, 
+                    acessibilidade completa e uma equipe de apoio sempre pronta para atender com gentileza e eficiência.
+                </p>
+            </div>
+    
+            <div class="footer">
+                <p><strong>Clínica CardioVida</strong></p>
+                <p>Telefone: (85) 3456-7890 | WhatsApp: (85) 98765-4321</p>
+                <p>Email: contato@cardiovida.com.br</p>
+                <p>Endereço: Rua do Coração Saudável, 123 - Centro, Sobral - CE</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

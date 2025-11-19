@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - CardioVida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .menu {
+            width: 200px;
+            background-color: #2c3e50;
+            padding: 20px 0;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a252f;
+        }
+
+        .logo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #3498db;
+        }
+
+        .logo h3 {
+            color: #3498db;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .menu ul {
+            list-style: none;
+        }
+
+        .menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .menu ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .menu ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #3498db;
+            padding: 20px;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1200');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: #ecf0f1;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .contato-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .contato-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contato-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .contato-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .contato-card p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .contato-card a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contato-card a:hover {
+            text-decoration: underline;
+        }
+
+        .formulario-contato {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+
+        .formulario-contato h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-enviar {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-enviar:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-limpar {
+            background-color: #95a5a6;
+            color: white;
+        }
+
+        .btn-limpar:hover {
+            background-color: #7f8c8d;
+        }
+
+        .mapa-section {
+            margin: 40px 0;
+        }
+
+        .mapa-section h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .mapa-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .mapa-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .endereco-destaque {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+
+        .endereco-destaque h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .endereco-destaque p {
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .icone-contato {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <div class="logo">
+                <img src="imagens/logo_site.png" alt="Logo CardioVida">
+                <h3>CardioVida</h3>
+            </div>
+            <ul>
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="sobre.html">Sobre a Clínica</a></li>
+                <li><a href="horario.html">Horário de Atendimento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="header">
+                <h1>Entre em Contato</h1>
+            </div>
+    
+            <div class="content">
+                <h2>Fale Conosco</h2>
+                <p>
+                    Estamos à disposição para atender você! Entre em contato conosco através dos 
+                    canais abaixo ou preencha o formulário que retornaremos o mais breve possível.
+                </p>
+
+                <div class="contato-grid">
+                    <div class="contato-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Telefone">
+                        <h3>📞 Telefone</h3>
+                        <p><strong>Fixo:</strong></p>
+                        <p><a href="tel:+558534567890">(85) 3456-7890</a></p>
+                        <p style="margin-top: 15px;"><strong>Celular:</strong></p>
+                        <p><a href="tel:+5585987654321">(85) 98765-4321</a></p>
+                    </div>
+
+                    <div class="contato-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                        <h3>💬 WhatsApp</h3>
+                        <p>Atendimento rápido via WhatsApp</p>
+                        <p style="margin-top: 10px;">
+                            <a href="https://wa.me/5585987654321" target="_blank">
+                                (85) 98765-4321
+                            </a>
+                        </p>
+                        <p style="margin-top: 10px; color: #555; font-size: 0.9em;">
+                            Seg a Sex: 8h às 18h<br>
+                            Sábados: 8h às 12h
+                        </p>
+                    </div>
+
+                    <div class="contato-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                        <h3>✉️ E-mail</h3>
+                        <p>Envie sua mensagem para:</p>
+                        <p style="margin-top: 10px;">
+                            <a href="mailto:contato@cardiovida.com.br">
+                                contato@cardiovida.com.br
+                            </a>
+                        </p>
+                        <p style="margin-top: 15px;">
+                            <a href="mailto:agendamento@cardiovida.com.br">
+                                agendamento@cardiovida.com.br
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <h2>Nosso Endereço</h2>
+                <div class="endereco-destaque">
+                    <h3>📍 Localização</h3>
+                    <p>
+                        <strong>Rua do Coração Saudável, 123 - Centro</strong><br>
+                        Sobral - CE, CEP: 62010-000<br>
+                        Próximo à Praça Principal
+                    </p>
+                </div>
+
+                <div class="mapa-section">
+                    <h3>📍 Como Chegar</h3>
+                    <div class="mapa-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.2842766928545!2d-40.35056492475708!3d-3.6867634434890557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ea45e4e1e7e1e1%3A0x1e1e1e1e1e1e1e1e!2sSobral%2C%20CE!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="formulario-contato">
+                    <h3>📝 Envie sua Mensagem</h3>
+                    <p style="margin-bottom: 25px; color: #555;">
+                        Preencha o formulário abaixo e nossa equipe entrará em contato com você em breve.
+                    </p>
+                    
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input 
+                                type="text" 
+                                id="nome" 
+                                name="nome" 
+                                placeholder="Digite seu nome completo"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="seu.email@exemplo.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input 
+                                type="text" 
+                                id="telefone" 
+                                name="telefone" 
+                                placeholder="(85) 98765-4321"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="assunto">Assunto *</label>
+                            <input 
+                                type="text" 
+                                id="assunto" 
+                                name="assunto" 
+                                placeholder="Qual o motivo do contato?"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea 
+                                id="mensagem" 
+                                name="mensagem" 
+                                placeholder="Escreva sua mensagem aqui..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-enviar">Enviar Mensagem</button>
+                            <button type="reset" class="btn btn-limpar">Limpar Formulário</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="endereco-destaque" style="margin-top: 30px; border-left-color: #27ae60;">
+                    <h3>🕒 Horário de Funcionamento</h3>
+                    <p>
+                        <strong>Segunda a Sexta:</strong> 08h às 19h<br>
+                        <strong>Sábados:</strong> 08h às 14h<br>
+                        <strong>Domingos e Feriados:</strong> Fechado
+                    </p>
+                </div>
+            </div>
+    
+            <div class="footer">
+                <p><strong>Clínica CardioVida</strong></p>
+                <p>Telefone: (85) 3456-7890 | WhatsApp: (85) 98765-4321</p>
+                <p>Email: contato@cardiovida.com.br</p>
+                <p>Endereço: Rua do Coração Saudável, 123 - Centro, Sobral - CE</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
